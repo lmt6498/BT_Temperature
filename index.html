@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+</head>
+<body>
+<script>
+    function Temperature(C){
+        this.C = C;
+
+        this.getC = function(){
+            return C;
+        }
+        this.getF = function (){
+            return (C*1.8)+32;
+        }
+        this.getK = function (){
+            return C+273.15;
+        }
+    }
+    var temperature = new Temperature(30);
+    var C = temperature.getC();
+    var F = temperature.getF();
+    var K = temperature.getK();
+
+    alert("Độ C: "+C +" Đổi sang độ F là: "+F+" Và đổi sang độ K là: "+K);
+</script>
+</body>
+</html>
